@@ -1,0 +1,20 @@
+@relation diemthifinal-weka.filters.unsupervised.instance.RemovePercentage-P20.0-V
+
+@attribute sbd numeric
+@attribute 'Diem xet tot nghiep' numeric
+@attribute 'Dieu kien tot nghiep' {Dat,'Khong Dat'}
+
+@data
+24008611,8.4,Dat
+51000032,7.8,Dat
+51000013,7.7,Dat
+51000003,7.1,Dat
+51000011,7.2,Dat
+51000007,5.4,Dat
+51000010,7.4,Dat
+51000018,8.4,Dat
+51000028,6.6,Dat
+51000034,8.4,Dat
+51000014,7,Dat
+51000084,4.9,Dat
+51000120,4.6,'Khong Dat'
