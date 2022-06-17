@@ -6,6 +6,7 @@ package javaapp;
 
 import weka.core.Instances;
 import weka.core.converters.ConverterUtils;
+import weka.core.converters.ConverterUtils.DataSource;
 import weka.filters.Filter;
 import weka.filters.unsupervised.instance.RemovePercentage;
 
@@ -14,7 +15,7 @@ import weka.filters.unsupervised.instance.RemovePercentage;
  * @author Admin
  */
 public class KnowledgeModel {
-    ConverterUtils.DataSource source;
+    DataSource source;
     Instances dataset;
     String[] model_options;
     String[] data_options;

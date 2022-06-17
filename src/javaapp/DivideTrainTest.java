@@ -229,13 +229,13 @@ public class DivideTrainTest extends javax.swing.JFrame {
     }//GEN-LAST:event_openFileBtnMouseClicked
    
     private void startBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_startBtnMouseClicked
-        int persent = 0;
+        double persent = 0;
         String fileTrain = "D:\\Doc\\Projects\\JavaApp\\diemthi_train.arff";
         String fileTest = "D:\\Doc\\Projects\\JavaApp\\diemthi_test.arff";
         if (inputFileTxt.getText().length()>0 && percentTxt.getText().length()>0){
             try {
                 KnowledgeModel model = new KnowledgeModel(inputFileTxt.getText(),null,null);
-                persent = Integer.parseInt(percentTxt.getText());
+                persent = Double.parseDouble(percentTxt.getText());
                 if (persent > 50){
                     model.trainset = model.divideTrainTest(model.dataset, 100-persent, false);
                     model.testset = model.divideTrainTest(model.dataset, 100-persent, true);

@@ -18,9 +18,10 @@ public class KnnFrame extends javax.swing.JFrame {
 
     public knnModel model;
     public KnnFrame() throws Exception {
-        this.model = new knnModel("",
-                "-K 10 -W 0 -A \"weka.core.neighboursearch.LinearNNSearch -A \\\"weka.core.EuclideanDistance -R first-last\\\"\"", null);
         initComponents();
+        String k = knnTxt.getText();
+        this.model = new knnModel("",
+                "-K "+k+" -W 0 -A \"weka.core.neighboursearch.LinearNNSearch -A \\\"weka.core.EuclideanDistance -R first-last\\\"\"", null);
     }
 
 /**
@@ -148,7 +149,7 @@ public class KnnFrame extends javax.swing.JFrame {
         knnStartBtn.setBackground(new java.awt.Color(0, 100, 0));
         knnStartBtn.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
         knnStartBtn.setForeground(new java.awt.Color(255, 255, 255));
-        knnStartBtn.setText("Thực hiện phân lớp");
+        knnStartBtn.setText("Xây dựng mô hình");
         knnStartBtn.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         knnStartBtn.setBorderPainted(false);
         knnStartBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));

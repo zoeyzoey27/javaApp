@@ -43,8 +43,6 @@ public class knnModel extends KnowledgeModel{
         int folds = 10;
         eval = new Evaluation(this.trainset);
         eval.crossValidateModel(knn, this.testset, folds, rnd);
-//        System.out.println(eval.toSummaryString(
-//                "\nKết quả đánh giá mô hình 10-fold cross-validation", false));
         return eval.toSummaryString(
                 "\nKết quả đánh giá mô hình 10-fold cross-validation", false);
     }
